@@ -3,8 +3,6 @@ package com.example.telegrambot;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import com.example.telegrambot.languages.engLocalization.EngLanguageSwitch;
-import com.example.telegrambot.languages.ruLocalization.RuLanguageSwitch;
 import com.example.telegrambot.buttons.ButtonsLogic;
 import com.example.telegrambot.config.BotConfig;
 import com.example.telegrambot.controller.CurrencyModelService;
@@ -117,19 +115,6 @@ public class TgBotLogic extends TelegramLongPollingBot {
                     break;
                 case "/language":
                     onChooseLanguage(chatId);
-                    if(update.hasCallbackQuery()) {
-                        String buttonData = update.getCallbackQuery().getData();
-                        if(buttonData.equals("RUSSIAN_LANGUAGE")) {
-                            RuLanguageSwitch ruLanguageSwitch = new RuLanguageSwitch();
-                            sendMessage(chatId, "RUSSIAAAN");
-                        } else if(buttonData.equals("ENGLISH_LANGUAGE")) {
-                            EngLanguageSwitch engLanguageSwitch = new EngLanguageSwitch();
-                            sendMessage(chatId, "ENGLISSSSSSH");
-                        }
-                    }
-                    else {
-                        EngLanguageSwitch engLanguageSwitch = new EngLanguageSwitch();
-                    }
                     break;
                 case "/help":
                     sendMessage(chatId, HELP_TEXT_ENG);
