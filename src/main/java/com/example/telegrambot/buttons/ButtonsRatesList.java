@@ -9,7 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import java.util.ArrayList;
 import java.util.List;
 
-public class ButtonsLogic {
+public class ButtonsRatesList {
 
     private static final String RUSSIAN_LANGUAGE = "RUSSIAN_LANGUAGE";
     private static final String ENGLISH_LANGUAGE = "ENGLISH_LANGUAGE";

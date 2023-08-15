@@ -4,7 +4,7 @@ import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 
 import java.util.List;
 
-public interface ButtonCommandsList {
+public interface MenuCommandsList {
     List<BotCommand> cmdList = List.of(
             new BotCommand("/currency", "catalog of currencies"),
             new BotCommand("/conversion", "convert your money"),

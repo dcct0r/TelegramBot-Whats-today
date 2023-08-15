@@ -3,11 +3,11 @@ package com.example.telegrambot;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import com.example.telegrambot.buttons.ButtonsLogic;
+import com.example.telegrambot.buttons.ButtonsRatesList;
 import com.example.telegrambot.config.BotConfig;
 import com.example.telegrambot.controller.CurrencyModelService;
 import com.example.telegrambot.model.CurrencyModel;
-import static com.example.telegrambot.buttons.ButtonCommandsList.cmdList;
+import static com.example.telegrambot.buttons.MenuCommandsList.cmdList;
 import static com.example.telegrambot.languages.engLocalization.EngLanguageConst.*;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -52,7 +52,7 @@ public class TgBotLogic extends TelegramLongPollingBot {
         SendMessage message = new SendMessage();
         message.setChatId(chatId);
         message.setText(LANGUAGE_CHOOSE_TEXT_ENG);
-        message.setReplyMarkup(ButtonsLogic.languageKeyboardMarkup());
+        message.setReplyMarkup(ButtonsRatesList.languageKeyboardMarkup());
         try {
             execute(message);
             log.info("Seems like it works!");
