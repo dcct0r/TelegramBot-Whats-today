@@ -23,7 +23,6 @@ public enum Rates {
         this.curSymb = curSymb;
     }
 
-
     public String getCur() {
         return cur;
     }
