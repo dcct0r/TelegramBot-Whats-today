@@ -4,8 +4,6 @@ Users can choose from a wide range of available currency pairs such as USD/EUR, 
 ## 📅 Up-to-date information  
 The bot provides up-to-date data on the exchange rate of the selected currency pair at the time the exchange closed. This allows users to monitor changes in exchange rates and make informed decisions.
 
-Test run
-:-------------------------:
 ![image](https://github.com/dcct0r/telegram-bot/assets/111187206/0993c3e8-19a0-4a91-9cd0-1b285d9585ba)
 
 ## 🔗 URL Structure
